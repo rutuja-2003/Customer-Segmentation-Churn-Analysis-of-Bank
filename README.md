@@ -134,16 +134,6 @@ Avg Balance
 
 Active Customer Ratio
 
-📁 Project Deliverables
-Deliverable	Status
-Excel Cleaning	✔ Completed
-MySQL Analysis	✔ Completed
-Python EDA in Colab	✔ Completed
-Cleaned Output File	✔ cleaned_european_bank.csv
-Power BI Dashboard Page 1	✔ Completed
-Power BI Insights Page	✔ Completed
-Final Report	🔜 Next Step
-Presentation PPT	🔜 After Report
 
 🧠 Skills Demonstrated
 Technical
