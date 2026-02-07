@@ -1,74 +1,55 @@
-**Customer Churn Analytics — European Bank
-Internship Project (Unified Mentor Pvt. Ltd.)**
-Excel | MySQL | Python (Colab) | Power BI
+⭐ Customer Segmentation & Churn Pattern Analytics – European Bank
+Data Analyst Internship Project — Unified Mentor Pvt. Ltd.
+📌 Project Overview
 
-🚀 Project Overview
+Customer churn is a major challenge for banks, directly affecting profitability and customer lifetime value. This project analyzes churn behavior for a European bank using a complete end-to-end data analytics pipeline.
 
-This project was completed as part of my Data Analyst Internship at Unified Mentor Pvt. Ltd.
+The goal is to identify why customers leave, discover high-risk segments, and provide data-driven retention strategies.
 
-The objective was to analyze customer churn for a European Bank, uncover churn-driving factors, segment high-risk customer groups, and provide actionable business recommendations.
+This project was completed as part of the Data Analyst Internship at Unified Mentor Pvt. Ltd.
 
-The project demonstrates a complete end-to-end analytics workflow:
+🎯 Objectives
 
-✔ Excel data cleaning
-✔ SQL analysis using MySQL
-✔ Python-based EDA using Google Colab
-✔ Power BI dashboard development
-✔ Insights + recommendations
-✔ KPI-driven summary page
+Measure customer churn rate
 
-🧩 Project Pipeline
-1️⃣ Data Cleaning in Excel
+Identify key churn drivers (age, geography, activity, balance, credit score, etc.)
 
-Tasks Completed:
+Segment customers into meaningful categories
 
-Removed duplicates
+Build an interactive dashboard for stakeholders
 
-Handled missing values
+Provide actionable retention recommendations
 
-Fixed incorrect data types
+📂 Dataset Description
 
-Verified formatting consistency
+File: european_bank.csv
+Records: ~10,000 customers
 
-Exported cleaned version for MySQL
+Key Features
 
-2️⃣ SQL Analysis in MySQL
+CustomerId
 
-Activities:
+Geography
 
-Imported cleaned Excel file into MySQL
+Gender
 
-Created database and customer table
+Age
 
-Performed analytical queries:
+CreditScore
 
-Churn rate
+Balance
 
-Customer segmentation
+NumOfProducts
 
-Credit score distribution
+IsActiveMember
 
-Geography-level churn
+EstimatedSalary
 
-Product usage vs churn
+Tenure
 
-High-balance customers
+Exited (Target Variable)
 
-Age-wise churn
-
-Exported MySQL-verified data for Python
-
-3️⃣ Python EDA in Google Colab
-
-Performed using: pandas, numpy, matplotlib, seaborn
-
-Python Tasks:
-
-Loaded dataset
-
-Additional cleaning
-
-Feature engineering:
+Feature Engineering
 
 Age_Group
 
@@ -76,96 +57,163 @@ CreditScore_Band
 
 Customer_Segment
 
-Univariate + bivariate + multivariate analysis
+🛠️ Tools & Technologies Used
+Data Cleaning
+
+Excel
+
+Power BI (Transform Data)
+
+Data Validation & Analysis
+
+MySQL
+
+Python (Google Colab)
+
+Pandas
+
+NumPy
+
+Matplotlib
+
+Seaborn
+
+Dashboarding
+
+Power BI
+
+DAX Measures
+
+Custom Slicers
+
+🔄 Project Workflow
+1. Business Understanding
+
+Defined the churn problem and established stakeholder goals.
+
+2. Data Understanding
+
+Explored dataset, validated schema, and reviewed definitions.
+
+3. Data Cleaning
+
+Removed duplicates
+
+Fixed data types
+
+Handled nulls & outliers
+
+Created segmentation columns
+
+Ensured logical consistency
+
+4. Data Analysis (SQL + Python)
+
+Performed EDA:
+
+Churn by geography
+
+Churn by age & gender
+
+Churn by credit score
+
+Impact of number of products
+
+Behavior of active vs inactive customers
 
 Correlation heatmap
 
-Exported final dataset → cleaned_european_bank.csv
-(This file is used in Power BI)
+Statistical summaries
 
-4️⃣ Power BI Dashboard Development
-✔ Dashboard built using only 6 visuals + 3 KPI cards + 1 slicer on Page 1
-✔ Insights page with 5 KPI cards + Insights + Recommendations + Strength + Risk
+5. Dashboard Development (Power BI)
 
-📊 PAGE 1 — Main Dashboard
-Visuals Used (6 Visuals):
+Created a 2-page analytical dashboard:
 
-Churn % & Exited Count by Age Group & Gender
+Page 1 – Churn Analytics
 
-Churn % & Exited Count by Age Group
+6 detailed visuals
 
-Churn % by CreditScore Band
+3 KPI cards
 
-Balance vs Exited — Scatter/Bubble Chart
+Customer Segment button slicer
 
-Churn % & Exited Count by Number of Products
+Page 2 – Insights & Recommendations
 
-Customer Count & Exited Count by Geography
+5 KPI cards
 
-KPI Cards (3)
+1 Strength Indicator
 
-Total Customers
+1 Risk Indicator
 
-Total Churned Customers
+Written insights & recommendations
 
-Churn Rate
+📊 Key Insights
 
-Slicer
+Customers aged 50+ have the highest churn rate.
 
-✔ Customer Segment (Button Slicer)
+Germany shows significantly higher churn than France & Spain.
 
-📝 PAGE 2 — Insights & Recommendations Page
-Sections Included:
+Inactive customers churn nearly twice as much as active members.
 
-✔ Insights (7-8 strong observations)
-✔ Business Recommendations (Targeted suggestions)
-✔ Key Strength (1 point)
-✔ Major Risk (1 point)
+Customers with two products show the strongest loyalty.
 
-KPI Cards (5)
+High-balance customers leaving the bank indicate potential business risk.
 
-Total Customers
+Credit score impacts churn but is not the primary churn driver.
 
-Churn Rate (%)
+💡 Business Recommendations
 
-High-Risk Customers
+Launch targeted engagement programs for 50+ age group.
 
-Avg Balance
+Develop Germany-specific retention strategy.
 
-Active Customer Ratio
+Improve engagement for inactive customers through reminders & app nudges.
+
+Promote two-product bundles to enhance customer stickiness.
+
+Create a high-balance customer monitoring program.
+
+Improve overall customer experience through feedback loops & personalized offers.
+
+🖥️ Dashboard Preview
+
+✔ Page 1: Customer Churn Analysis
+<img width="1211" height="681" alt="image" src="https://github.com/user-attachments/assets/f542d022-7bef-45ce-8d22-ebcceaa4006a" />
+
+✔ Page 2: Insights, Recommendations, KPI Summary
+<img width="1207" height="681" alt="image" src="https://github.com/user-attachments/assets/2c41b823-4aab-4632-9914-d1fa9f5358e3" />
 
 
-🧠 Skills Demonstrated
-Technical
+🧾 Project Deliverables
 
-Excel Data Cleaning
+Cleaned dataset (cleaned_european_bank.csv)
 
-MySQL Querying & Data Validation
+SQL Query Scripts
 
-Python EDA
+Python EDA Notebook (Customer_Churn_Analysis.ipynb)
 
-Feature Engineering
+Power BI Dashboard (.pbix file)
 
-Power BI Dashboard Design
+Final Project Report (PDF/Word)
 
-DAX Calculations
+GitHub README (this file)
 
-Data Visualization
+📚 Learning Outcomes
 
-Analytical Thinking
+End-to-end real-world data analytics workflow
 
-Business & Communication
+Data cleaning across different tools
 
-Storytelling with data
+SQL & Python based data validation
 
-Insight generation
+DAX measures & Power BI dashboarding
 
-Recommendation building
+Insight generation for stakeholders
 
-Professional reporting
+Business storytelling & reporting
 
-🎯 Conclusion
+👩‍💻 About the Author
 
-This internship project successfully delivered a complete churn analytics solution for a European bank. By analyzing customer demographics, credit behavior, geography, and product usage patterns, the project provides a strong foundation for customer retention strategies.
-
-The final Power BI dashboard enables the bank to quickly identify high-risk segments and take proactive action to reduce churn.
+Rutuja Kamble
+Data Analyst Intern at Unified Mentor Pvt. Ltd.
+Skills: Python, SQL, Power BI, Advanced Excel, Data Visualization, Dashboarding
