@@ -222,7 +222,7 @@ The app uses a custom purple-dark mode:
 <img width="1919" height="830" alt="image" src="https://github.com/user-attachments/assets/e2d5fdc4-c054-4ed5-979a-5a3365e1285b" />
 <img width="1919" height="823" alt="image" src="https://github.com/user-attachments/assets/8fd6fce5-68cc-4fbf-b158-58cddf08654f" />
 
-📊 Churn Summary
+📊 Customer Churn Executive Summary
 <img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/00463cd8-c7b5-453f-8d8e-4c852eca6413" />
 
 
