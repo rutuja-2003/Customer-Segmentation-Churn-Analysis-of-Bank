@@ -1,219 +1,196 @@
-⭐ Customer Segmentation & Churn Pattern Analytics – European Bank
-Data Analyst Internship Project — Unified Mentor Pvt. Ltd.
-📌 Project Overview
+🏦 Bank Customer Segmentation & Churn Analysis – Streamlit Web Application
 
-Customer churn is a major challenge for banks, directly affecting profitability and customer lifetime value. This project analyzes churn behavior for a European bank using a complete end-to-end data analytics pipeline.
+An interactive Streamlit analytics application built to explore customer churn patterns, identify high-risk customer segments, and help financial institutions improve retention strategies.
 
-The goal is to identify why customers leave, discover high-risk segments, and provide data-driven retention strategies.
+This project delivers dynamic dashboards, drill-down analysis, and segment-wise churn exploration, meeting the typical workflow of a BI Analyst / Data Analyst in the banking domain.
 
-This project was completed as part of the Data Analyst Internship at Unified Mentor Pvt. Ltd.
+🔍 1. Project Overview
 
-🎯 Objectives
+Customer churn is one of the biggest concerns for banks. Losing high-value customers impacts:
 
-Measure customer churn rate
+Profitability
 
-Identify key churn drivers (age, geography, activity, balance, credit score, etc.)
+Long-term customer lifetime value
 
-Segment customers into meaningful categories
+Cross-selling opportunities
 
-Build an interactive dashboard for stakeholders
+This project uses real banking data to analyze why customers leave and provides actionable churn insights using a Streamlit web application.
 
-Provide actionable retention recommendations
+The dashboards allow users to:
 
-📂 Dataset Description
+Monitor churn
 
-File: european_bank.csv
-Records: ~10,000 customers
+Compare churn across age, tenure, geography
 
-Key Features
+Filter and examine high-value customers
 
-CustomerId
+Analyze customer behavior dynamically
 
-Geography
+🎯 2. Business Problem
 
-Gender
+Banks struggle to identify:
 
-Age
+Which customers are at the highest risk of churn?
 
-CreditScore
+How churn varies across age groups, tenure, and geography?
 
-Balance
+What defines a high-value customer, and why are they leaving?
 
-NumOfProducts
+Which segments require urgent retention efforts?
 
-IsActiveMember
+This project solves these questions through a visual and interactive analytics tool.
 
-EstimatedSalary
+🧠 3. Project Objectives
 
-Tenure
+✔ Build an interactive customer churn analytics dashboard
+✔ Provide segment filters for deep-dive exploration
+✔ Deliver dynamic KPIs updating with filters
+✔ Compare churn across demographics and geographies
+✔ Identify high-value customers and analyze their churn patterns
+✔ Enable drill-down visualizations for business decisions
 
-Exited (Target Variable)
+🖥️ 4. Application Features
+### 📊 A. Overall Churn Summary
 
-Feature Engineering
+Total customers
 
-Age_Group
+Churned vs Active customers
 
-CreditScore_Band
+Automated churn rate calculation
 
-Customer_Segment
+Churn distribution chart
 
-🛠️ Tools & Technologies Used
-Data Cleaning
+🗺️ B. Geography-wise Churn Analysis
 
-Excel
+Churn percentage by country
 
-Power BI (Transform Data)
+Interactive geographic bar charts
 
-Data Validation & Analysis
+📈 C. Age & Tenure Comparative Analysis
 
-MySQL
+Age vs Churn % line visualization
 
-Python (Google Colab)
+Tenure vs Churn % trendline
 
-Pandas
+Identifies high-risk age ranges
 
-NumPy
+💰 D. High-Value Customer Churn Explorer
 
-Matplotlib
+Dynamic filters for:
 
-Seaborn
+Minimum Credit Score
 
-Dashboarding
+Minimum Account Balance
 
-Power BI
+Number of Products Owned
 
-DAX Measures
+Includes:
 
-Custom Slicers
+High-value churn rate KPI
 
-🔄 Project Workflow
-1. Business Understanding
+Scatter plot: Balance vs Credit Score vs Churn
 
-Defined the churn problem and established stakeholder goals.
+Drill-down customer segmentation
 
-2. Data Understanding
+🎛️ E. User Capabilities
 
-Explored dataset, validated schema, and reviewed definitions.
-
-3. Data Cleaning
-
-Removed duplicates
-
-Fixed data types
-
-Handled nulls & outliers
-
-Created segmentation columns
-
-Ensured logical consistency
-
-4. Data Analysis (SQL + Python)
-
-Performed EDA:
-
-Churn by geography
-
-Churn by age & gender
-
-Churn by credit score
-
-Impact of number of products
-
-Behavior of active vs inactive customers
-
-Correlation heatmap
-
-Statistical summaries
-
-5. Dashboard Development (Power BI)
-
-Created a 2-page analytical dashboard:
-
-Page 1 – Churn Analytics
-
-6 detailed visuals
-
-3 KPI cards
-
-Customer Segment button slicer
-
-Page 2 – Insights & Recommendations
-
-5 KPI cards
-
-1 Strength Indicator
-
-1 Risk Indicator
-
-Written insights & recommendations
-
-📊 Key Insights
-
-Customers aged 50+ have the highest churn rate.
-
-Germany shows significantly higher churn than France & Spain.
-
-Inactive customers churn nearly twice as much as active members.
-
-Customers with two products show the strongest loyalty.
-
-High-balance customers leaving the bank indicate potential business risk.
-
-Credit score impacts churn but is not the primary churn driver.
-
-💡 Business Recommendations
-
-Launch targeted engagement programs for 50+ age group.
-
-Develop Germany-specific retention strategy.
-
-Improve engagement for inactive customers through reminders & app nudges.
-
-Promote two-product bundles to enhance customer stickiness.
-
-Create a high-balance customer monitoring program.
-
-Improve overall customer experience through feedback loops & personalized offers.
-
-🖥️ Dashboard Preview
-
-✔ Page 1: Customer Churn Analysis
-<img width="1211" height="681" alt="image" src="https://github.com/user-attachments/assets/f542d022-7bef-45ce-8d22-ebcceaa4006a" />
-
-✔ Page 2: Insights, Recommendations, KPI Summary
-<img width="1207" height="681" alt="image" src="https://github.com/user-attachments/assets/2c41b823-4aab-4632-9914-d1fa9f5358e3" />
-
-
-🧾 Project Deliverables
-
-Cleaned dataset (cleaned_european_bank.csv)
-
-SQL Query Scripts
-
-Python EDA Notebook (Customer_Churn_Analysis.ipynb)
-
-Power BI Dashboard (.pbix file)
-
-Final Project Report (PDF/Word)
-
-GitHub README (this file)
-
-📚 Learning Outcomes
-
-End-to-end real-world data analytics workflow
-
-Data cleaning across different tools
-
-SQL & Python based data validation
-
-DAX measures & Power BI dashboarding
-
-Insight generation for stakeholders
-
-Business storytelling & reporting
-
-👩‍💻 About the Author
+✔ Segment filters
+✔ Dynamic KPI updates
+✔ Interactive charts
+✔ Drill-down segmentation views
+✔ Clean and simple navigation
+
+🏗️ 5. Application Architecture
+                       ┌──────────────┐
+                       │   Dataset     │
+                       │  bank.csv     │
+                       └──────┬───────┘
+                              │
+                              ▼
+                    ┌──────────────────┐
+                    │  Data Processing │
+                    └──────────────────┘
+                              │
+                              ▼
+              ┌────────────────────────────────┐
+              │    Streamlit Web Application   │
+              └────────────────────────────────┘
+                 │         │          │
+                 ▼         ▼          ▼
+        Overall Churn   Geo-Churn   High-Value
+          Summary        Analysis      Explorer
+
+🧰 6. Tech Stack
+Component	Technology
+Dashboard Framework	Streamlit
+Data Manipulation	Pandas, NumPy
+Visualizations	Altair, Matplotlib
+ML-ready Structure	Scikit-Learn
+Deployment	Streamlit Cloud
+
+📁 7. Folder Structure
+customer-churn-app/
+│── app.py
+│── pages/
+│     ├── 1_📊_Churn_Summary.py
+│     ├── 2_🗺️_Geography_Wise_Churn.py
+│     ├── 3_📈_Age_Tenure_Analysis.py
+│     ├── 4_💰_High_Value_Churn.py
+│── data/
+│     └── bank.csv
+│── requirements.txt
+│── README.md
+
+🔧 8. Installation & Setup
+Step 1: Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+Step 2: Install dependencies
+pip install -r requirements.txt
+
+Step 3: Run the Streamlit application
+streamlit run app.py
+
+📈 9. Screenshots
+
+(You can add images later)
+
+Dashboard Home
+
+Geography-wise Churn
+
+High-Value Customer Explorer
+
+📊 10. Key Insights from the Data
+
+✔ Customers aged 45–60 show significantly higher churn
+✔ Low-tenure customers show a sudden churn spike
+✔ Germany exhibits the highest churn rate
+✔ Customers with:
+
+High balance
+
+High credit score
+
+Multiple products
+
+still churn — indicating dissatisfaction despite financial value.
+
+✔ High-value churn analysis shows product ownership influences churn more than balance.
+
+🚀 11. Future Enhancements
+
+🔹 Add machine learning models (Logistic Regression, Random Forest, XGBoost)
+🔹 Predict churn likelihood for each customer
+🔹 Build LTV (Lifetime Value) estimation
+🔹 Add Power BI style theme
+🔹 Include cohort retention analysis
+🔹 Add customer segmentation using K-Means
+
+👩‍💻 12. Author
 
 Rutuja Kamble
-Data Analyst Intern at Unified Mentor Pvt. Ltd.
-Skills: Python, SQL, Power BI, Advanced Excel, Data Visualization, Dashboarding
+📍 Mumbai, India
+💼 Aspiring BI Analyst | Data Analyst
+💡 Passionate about analytics, dashboards & business intelligence
