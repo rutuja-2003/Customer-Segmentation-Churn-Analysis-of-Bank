@@ -5,6 +5,7 @@ st.title("📊 Overall Churn Summary")
 
 df = pd.read_csv("data/bank.csv")
 
+
 # KPIs
 total_customers = len(df)
 churned = df[df["Exited"] == 1].shape[0]
