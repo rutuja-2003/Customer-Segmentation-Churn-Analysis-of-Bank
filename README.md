@@ -224,6 +224,8 @@ The app uses a custom purple-dark mode:
 
 📊 Customer Churn Executive Summary
 <img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/00463cd8-c7b5-453f-8d8e-4c852eca6413" />
+<img width="1913" height="817" alt="image" src="https://github.com/user-attachments/assets/fd699163-4946-4104-940b-6ebebd43bc32" />
+<img width="1919" height="828" alt="image" src="https://github.com/user-attachments/assets/9b3ef517-24ca-4c23-8724-3147d8a0497e" />
 
 
 🌍 Geography View
