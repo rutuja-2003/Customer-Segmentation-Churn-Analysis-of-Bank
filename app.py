@@ -1,142 +1,170 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
 import pandas as pd
 
-# --------------------------- PAGE CONFIGURATION ---------------------------- #
+# -------------------------
+# PAGE CONFIGURATION
+# -------------------------
 st.set_page_config(
     page_title="Bank Customer Churn Dashboard",
     layout="wide",
-    page_icon="📊",
+    page_icon="🏦"
 )
 
-# --------------------------- LOAD DATA ------------------------------------- #
-@st.cache_data
-def load_data():
-    return pd.read_csv("data/bank.csv")
-
-df = load_data()
-
-# --------------------------- CUSTOM CSS (PURPLE THEME + DARK MODE) --------- #
+# -------------------------
+# PAGE STYLING
+# -------------------------
 st.markdown("""
     <style>
+        /* Main background */
+        .main {
+            background-color: #0e0e1a;
+            color: #ffffff;
+        }
 
-    /* Main background */
-    .stApp {
-        background-color: #0d0b1f;
-        color: #e1e1ff;
-    }
+        /* Header bar */
+        .top-bar {
+            background: linear-gradient(90deg, #6c42f5, #a678ff);
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
 
-    /* Sidebar */
-    section[data-testid="stSidebar"] {
-        background-color: #150f2f;
-        border-right: 1px solid #5a4e88;
-    }
+        /* Sidebar title */
+        .css-1d391kg p {
+            font-size: 20px !important;
+        }
 
-    /* Sidebar text */
-    .css-1d391kg, .css-qbe2hs {
-        color: #e1e1ff !important;
-    }
+        /* Cards */
+        .metric-card {
+            background-color: #1c1c2b;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #3d3d66;
+        }
 
-    /* Top title */
-    h1 {
-        color: #c9b6ff !important;
-        font-weight: 700;
-    }
+        .metric-title {
+            font-size: 16px;
+            color: #c3c3ff;
+        }
 
-    /* Subheaders */
-    h2, h3 {
-        color: #d8c9ff !important;
-    }
-
-    /* Cards */
-    .metric-card {
-        background-color: #1c163d;
-        padding: 20px;
-        border-radius: 15px;
-        border: 1px solid #5a4e88;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    /* Option Menu Active Item */
-    .nav-link.active {
-        background-color: #6a44ff !important;
-        color: white !important;
-        border-radius: 8px;
-    }
-
-    /* Option Menu */
-    .nav-link:hover {
-        background-color: #5333cc !important;
-        color: #fff !important;
-        border-radius: 8px;
-    }
+        .metric-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+        }
 
     </style>
 """, unsafe_allow_html=True)
 
-# --------------------------- SIDEBAR MENU ---------------------------------- #
-with st.sidebar:
-    selected = option_menu(
-        menu_title="🏦 Bank Churn Dashboard",
-        options=["Home", "Filters"],
-        icons=["house", "filter"],
-        default_index=0,
-        styles={
-            "nav-link": {"font-size": "15px", "color": "#e1e1ff"},
-            "icon": {"color": "#c9b6ff"},
-        }
+# -------------------------
+# TOP HEADER
+# -------------------------
+st.markdown('<div class="top-bar">🏦 Bank Customer Churn Analysis Dashboard</div>', unsafe_allow_html=True)
+
+# -------------------------
+# SIDEBAR NAVIGATION
+# -------------------------
+st.sidebar.title("📌 Navigation")
+page = st.sidebar.radio(
+    "Go to:",
+    ["Home", "About Dashboard"]
+)
+
+# -------------------------
+# LOAD DATA
+# -------------------------
+df = pd.read_csv("data/bank.csv")
+
+# -------------------------
+# HOME PAGE
+# -------------------------
+if page == "Home":
+    st.subheader("📊 Overview")
+    st.write(
+        "Welcome to the interactive **Bank Customer Churn Analysis Dashboard**. "
+        "Use the filters below to explore churn behavior across demographics, geography, and financial indicators."
     )
 
-# --------------------------- HOME PAGE ------------------------------------- #
-if selected == "Home":
-    st.title("📊 Customer Churn Dashboard")
-    st.write("Explore customer churn insights with a clean, dark purple theme.")
+    # -------------- FILTER SECTION --------------
+    st.markdown("### 🔎 Filters")
 
     col1, col2, col3 = st.columns(3)
 
-    with col1:
-        st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-        st.metric("Total Customers", f"{len(df):,}")
-        st.markdown('</div>', unsafe_allow_html=True)
+    geography = col1.multiselect(
+        "🌍 Select Geography",
+        options=df["Geography"].unique(),
+        default=df["Geography"].unique()
+    )
 
-    with col2:
-        churn_rate = df["Exited"].mean() * 100
-        st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-        st.metric("Overall Churn Rate", f"{churn_rate:.2f}%")
-        st.markdown('</div>', unsafe_allow_html=True)
+    gender = col2.multiselect(
+        "👤 Select Gender",
+        options=df["Gender"].unique(),
+        default=df["Gender"].unique()
+    )
 
-    with col3:
-        active = len(df[df["Exited"] == 0])
-        st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-        st.metric("Active Customers", f"{active:,}")
-        st.markdown('</div>', unsafe_allow_html=True)
+    age_range = col3.slider(
+        "🎯 Age Range",
+        min_value=int(df["Age"].min()),
+        max_value=int(df["Age"].max()),
+        value=(18, 60)
+    )
 
-# --------------------------- FILTERS PAGE ---------------------------------- #
-if selected == "Filters":
-    st.title("🔍 Apply Filters")
-
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        geo = st.multiselect("🌍 Geography", df["Geography"].unique())
-
-    with col2:
-        gender = st.multiselect("🧑 Gender", df["Gender"].unique())
-
-    with col3:
-        tenure = st.slider("📆 Tenure", 0, 10, (0, 10))
-
-    filtered_df = df.copy()
-
-    if geo:
-        filtered_df = filtered_df[filtered_df["Geography"].isin(geo)]
-    if gender:
-        filtered_df = filtered_df[filtered_df["Gender"].isin(gender)]
-
-    filtered_df = filtered_df[
-        (filtered_df["Tenure"] >= tenure[0]) &
-        (filtered_df["Tenure"] <= tenure[1])
+    # Apply filters
+    filtered_df = df[
+        (df["Geography"].isin(geography)) &
+        (df["Gender"].isin(gender)) &
+        (df["Age"].between(age_range[0], age_range[1]))
     ]
 
-    st.write("### Filtered Dataset", filtered_df)
+    # -------------- KPI CARDS --------------
+    st.markdown("### 📈 Key Metrics")
+
+    total_customers = len(filtered_df)
+    churn_rate = round(filtered_df["Exited"].mean() * 100, 2)
+    avg_credit = round(filtered_df["CreditScore"].mean(), 1)
+    avg_balance = round(filtered_df["Balance"].mean(), 1)
+
+    k1, k2, k3, k4 = st.columns(4)
+
+    with k1:
+        st.markdown('<div class="metric-card"><div class="metric-title">Total Customers</div>'
+                    f'<div class="metric-value">{total_customers}</div></div>', unsafe_allow_html=True)
+
+    with k2:
+        st.markdown('<div class="metric-card"><div class="metric-title">Overall Churn Rate</div>'
+                    f'<div class="metric-value">{churn_rate}%</div></div>', unsafe_allow_html=True)
+
+    with k3:
+        st.markdown('<div class="metric-card"><div class="metric-title">Avg Credit Score</div>'
+                    f'<div class="metric-value">{avg_credit}</div></div>', unsafe_allow_html=True)
+
+    with k4:
+        st.markdown('<div class="metric-card"><div class="metric-title">Avg Balance</div>'
+                    f'<div class="metric-value">${avg_balance}</div></div>', unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    st.success("Use the left sidebar to access detailed churn analysis pages like Geography, Age, Tenure, and High-Value Churn!")
+
+# -------------------------
+# ABOUT PAGE
+# -------------------------
+elif page == "About Dashboard":
+    st.header("ℹ️ About This Project")
+    st.write("""
+        This dashboard provides a full churn analysis for a European bank.  
+        It includes segmentation, churn distribution, financial risk, and behavior insights.
+        
+        Navigate through the detailed pages:
+        - **Churn Summary**
+        - **Geography-wise Churn**
+        - **Age & Tenure Analysis**
+        - **High-Value Customer Churn**
+        
+        All results are dynamic and update with filters.
+    """)
