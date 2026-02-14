@@ -19,10 +19,19 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
-from google.colab import files
-uploaded = files.upload()
+import streamlit as st
+import pandas as pd
 
-df = pd.read_csv(next(iter(uploaded)))
+# File Upload
+uploaded_file = st.file_uploader("Upload the Bank Dataset (CSV file)", type=["csv"])
+
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.write("Preview of Dataset:")
+    st.dataframe(df)
+else:
+    st.warning("Please upload a CSV file to continue.")
+
 df.head()
 
 """Basic Info & Check Null Values"""
