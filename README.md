@@ -183,7 +183,7 @@ Data Analyst with interests in:
 
 🖼 Screenshots 
 📊 Dashboard Home
-<img width="1919" height="834" alt="image" src="https://github.com/user-attachments/assets/68dd5875-558c-4926-8ae6-4a6355084d2a" />
+
 <img width="1919" height="825" alt="image" src="https://github.com/user-attachments/assets/c519bac8-4721-4d90-92d1-86b1b45b5915" />
 <img width="1917" height="817" alt="image" src="https://github.com/user-attachments/assets/1e289252-d832-4827-bc6f-fe1ae86e9ed7" />
 
