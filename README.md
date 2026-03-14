@@ -210,7 +210,19 @@ Data Analyst with interests in:
 <img width="1919" height="823" alt="image" src="https://github.com/user-attachments/assets/6171212a-2843-495a-ac4f-1a04cf9c8701" />
 ![Uploading image.png…]()
 
+## 📊 Dashboard Preview
 
+### Executive Summary
+![Executive Summary](screenshots/executive_summary.png)
+
+### Geography Churn Analysis
+![Geography](screenshots/geography_analysis.png)
+
+### Age & Tenure Analysis
+![Age Tenure](screenshots/age_tenure.png)
+
+### High Value Customer Explorer
+![High Value](screenshots/high_value.png)
 
 
 🔗 Live App 
