@@ -1,221 +1,185 @@
-🏦 Customer Segmentation & Churn Analysis Dashboard (Bank Dataset)
+# 📊 Bank Customer Churn Analysis & Interactive Dashboard
 
-An interactive Streamlit-based analytics dashboard designed to explore customer behavior, segment profiles, and churn patterns for a European bank.
-This project showcases business intelligence, customer segmentation, churn prediction insights, and data storytelling — delivered through a dark-mode purple themed UI.
+An end-to-end **Data Analytics and Machine Learning project** that analyzes bank customer churn patterns and provides an **interactive Streamlit dashboard** for exploring churn risk across customer segments.
 
-🌟 Key Highlights
+The project combines **Exploratory Data Analysis (EDA), segmentation analysis, machine learning models, and an interactive dashboard** to help understand why customers leave a bank and how organizations can improve customer retention.
 
-🔮 Fully interactive dashboard built with Streamlit
+---
 
-🟣 Dark mode + Purple UI theme
+# 📌 Project Overview
 
-📊 Dynamic KPI tracking
+Customer churn is a major challenge for financial institutions. Losing existing customers can significantly impact revenue and long-term growth.
 
-🧩 Multi-level customer segmentation
+This project analyzes customer data to:
 
-📉 Churn behavior exploration across age, geography, tenure, and financial metrics
+• Identify key factors influencing churn
+• Segment high-risk customer groups
+• Apply machine learning models for churn prediction
+• Provide an interactive dashboard for decision-makers
 
-🎯 Designed for business decision-making & revenue risk identification
+The findings help banks **develop targeted strategies to reduce churn and improve customer engagement.**
 
-📁 Project Structure
-├── app.py
-├── README.md
-├── requirements.txt
-├── data
+---
+
+# 🎯 Objectives
+
+• Analyze customer demographic and financial characteristics
+• Identify high-risk churn segments using data analytics
+• Build predictive models for churn prediction
+• Develop an interactive dashboard for business insights
+
+---
+
+# 🧠 Key Insights
+
+From the analysis, several churn patterns were observed:
+
+• Customers from **Germany show the highest churn rate** compared to other regions.
+• **Older customers** tend to churn more frequently than younger customers.
+• Customers with **shorter tenure** are more likely to leave the bank.
+• **High-balance customers may still churn**, suggesting engagement issues rather than financial value.
+
+These insights can help banks design **customer retention programs and personalized services**.
+
+---
+
+# 📊 Streamlit Dashboard
+
+An interactive **Streamlit dashboard** was developed to visualize churn patterns and explore customer segments.
+
+## Dashboard Features
+
+The dashboard includes the following analytical modules:
+
+### 1️⃣ Executive Summary
+
+• KPI cards displaying key metrics
+• Customer churn distribution
+• Interactive global filters (Geography & Gender)
+
+### 2️⃣ Geography-wise Churn Analysis
+
+• Comparison of churn rates across different countries
+• Visualization of regional churn patterns
+
+### 3️⃣ Age & Tenure Analysis
+
+• Customer churn trends by age group
+• Churn probability based on customer tenure
+
+### 4️⃣ High-Value Customer Explorer
+
+• Interactive filters for identifying high-value customers
+• Balance vs Credit Score churn visualization
+• Churn risk analysis among financially valuable customers
+
+The dashboard enables **interactive data exploration for business decision-making.**
+
+---
+
+# 🛠 Technologies Used
+
+• **Python**
+• **Pandas** – Data processing
+• **Plotly** – Interactive visualizations
+• **Streamlit** – Dashboard development
+• **Scikit-learn** – Machine learning models
+
+---
+
+# 📂 Project Structure
+
+```
+Bank-Churn-Analysis
+│
+├── data/
 │   └── bank.csv
-├── pages
-│   ├── 1_📊_Churn_Summary.py
-│   ├── 2_🗺️_Geography_Wise_Churn.py
-│   ├── 3_📈_Age_Tenure_Analysis.py
-│   └── 4_💰_High_Value_Churn.py
-└── .streamlit
-    └── config.toml
+│
+├── pages/
+│   ├── 2_Geography_Churn.py
+│   ├── 3_Age_Tenure_Analysis.py
+│   └── 4_High_Value_Churn.py
+│
+├── app.py
+├── requirements.txt
+├── research_paper.pdf
+└── README.md
+```
 
+---
 
-🧠 Customer Segmentation Framework
+# ⚙️ Installation & Setup
 
-This dashboard uses multi-dimensional segmentation to analyze behaviors, churn risk, and customer value.
+Clone the repository:
 
-1️⃣ Geographic Segmentation
+```bash
+git clone https://github.com/your-username/bank-churn-dashboard.git
+cd bank-churn-dashboard
+```
 
-France
+Install dependencies:
 
-Spain
+```bash
+pip install -r requirements.txt
+```
 
-Germany
+Run the Streamlit app:
 
-2️⃣ Age Segmentation
+```bash
+streamlit run app.py
+```
 
-<30
+The dashboard will open in your browser.
 
-30–45
+---
 
-46–60
+# 📈 Example Use Cases
 
-60+
+This project can help:
 
-3️⃣ Credit Score Bands
+• Banks identify **customers at risk of leaving**
+• Business analysts understand **customer behavior patterns**
+• Decision-makers design **targeted retention strategies**
+• Data analysts build **predictive churn models**
 
-Low (300–580)
+---
 
-Medium (581–700)
+# 📚 Research Component
 
-High (701–850)
+The project also includes a **research paper** that documents:
 
-4️⃣ Tenure Groups
+• Exploratory Data Analysis
+• Segmentation analysis
+• Machine learning modeling
+• Churn risk insights
 
-New Customers (0–3 yrs)
+This integrates **academic research with practical analytics implementation.**
 
-Mid-term (4–7 yrs)
+---
 
-Long-term (8–10 yrs)
+# 🚀 Future Improvements
 
-5️⃣ Balance Segments
+Possible enhancements include:
 
-Zero-balance
+• Integration of advanced predictive models
+• Real-time data integration
+• Customer behavior and transaction-level analysis
+• Deployment on a cloud platform
 
-Low-balance
+---
 
-High-balance
+# 👩‍💻 Author
 
-📉 Churn Distribution Analysis
+**Rutuja Kamble**
 
-The dashboard provides deep churn insights including:
+Data Analyst with interests in:
 
-✔ Overall churn rate
-✔ Churn rate by each segment
-✔ Segment size contribution to churn
-✔ Comparison of churn vs retained profiles
-✔ Financial and demographic churn trends
+• Data Analytics
+• Machine Learning
+• Business Intelligence
+• Interactive Data Visualization
 
-👩‍🧑 Comparative Demographic Analysis
-Gender Differences
-
-Male vs Female churn patterns
-
-Gender-based retention risk
-
-Geography × Age Interaction
-
-Young churners in Germany
-
-Older customers in France
-
-Mid-age churn spikes in Spain
-
-Financial Stability vs Churn
-
-Salary × Balance interactions
-
-Low credit score → high churn correlation
-
-💎 High-Value Customer Churn Analysis
-
-This module identifies and analyzes:
-
-High-balance churners
-
-Salary vs balance churn patterns
-
-Revenue-at-risk estimation
-
-Premium customer churn behavior
-
-📌 Key Performance Indicators (KPIs)
-KPI	Description
-Overall Churn Rate	% of customers who exited
-Segment Churn Rate	Churn % for each segment filter
-High-Value Churn Ratio	Churn rate specifically for premium customers
-Geographic Risk Index	Churn risk level by region
-Engagement Drop Indicator	Relationship between inactivity and churn
-
-All KPIs update dynamically based on selected filters.
-
-🚀 Streamlit Web Application Modules
-
-Your app includes four complete interactive BI modules:
-
-📊 1. Overall Churn Summary
-
-Global churn KPIs
-
-Churn vs retained comparative charts
-
-Segment-wise churn highlights
-
-Summary metrics with purple theme
-
-🌍 2. Geography-wise Churn Analysis
-
-Churn distribution by France, Spain, Germany
-
-Regional KPIs
-
-Geo-level drill-downs
-
-Compare churn across countries
-
-👥 3. Age & Tenure Comparison
-
-Age group churn patterns
-
-Tenure-based churn groups
-
-Interaction plots
-
-Retention risk segments
-
-💎 4. High-Value Customer Churn Explorer
-
-Identify high-value churners
-
-Salary × Balance churn scatter
-
-Revenue risk analysis
-
-High-value customer retention insights
-
-🎛 User Features & Capabilities
-✔ Segment Filters
-
-geography
-
-age
-
-credit score
-
-tenure
-
-balance
-
-✔ Dynamic KPI Updates
-
-KPIs change instantly based on filters.
-
-✔ Drill-down Visuals
-
-Deep-dive into:
-
-churned customers only
-
-retained customers only
-
-high-value customers
-
-✔ Responsive UI
-
-Works on desktop & mobile
-
-Dark purple theme
-
-🎨 UI / Dark Mode Theme
-
-The app uses a custom purple-dark mode:
-
-• Background: #0C0F1A  
-• Primary Purple: #7B2CBF  
-• Highlight Purple: #9D4EDD  
-• White Accent: #F4F6FF  
+---
 
 🖼 Screenshots 
 📊 Dashboard Home
@@ -247,27 +211,7 @@ The app uses a custom purple-dark mode:
 ![Uploading image.png…]()
 
 
-🧪 Technologies Used
 
-Python
-
-Pandas
-
-NumPy
-
-Matplotlib
-
-Seaborn
-
-Plotly
-
-Streamlit
-
-streamlit-option-menu
-
-▶️ Running the App Locally
-pip install -r requirements.txt
-streamlit run app.py
 
 🔗 Live App 
 
